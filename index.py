@@ -12,7 +12,7 @@ def main():
     st.markdown("<h1 style='text-align: center; color: #00C59F;'>Housing Data Interacitve Visualization</h1>", unsafe_allow_html=True)
     st.caption(' Source : Federal Government')
 
-    df_property = pd.read_csv('cleaned_dataset.csv')
+    df_property = pd.read_csv('DATA/cleaned_dataset.csv')
 
     # Sidebar for navigation
     st.sidebar.title("Navigation")
