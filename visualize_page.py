@@ -2,12 +2,8 @@ import streamlit as st
 import pandas as pd
 import folium 
 from streamlit_folium import st_folium
-from folium.features import GeoJsonTooltip
-import seaborn as sns
-import matplotlib.pyplot as plt
-import dash
-from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
+
 
 def highlight_property_name(s, selected_prop_names):
     """
