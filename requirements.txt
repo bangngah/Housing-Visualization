@@ -2,7 +2,6 @@ streamlit
 pandas
 folium
 streamlit_folium
-folium.features
 seaborn
 matplotlib.pyplot
 dash
