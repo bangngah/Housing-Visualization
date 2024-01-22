@@ -75,7 +75,7 @@ def show_visualization_page(df_property):
 
     c1, c2 = st.columns((1, 1))
     with c1:
-         df_property_general = pd.read_csv('district_summary.csv')
+         df_property_general = pd.read_csv('DATA/district_summary.csv')
          stacked_bar_fig = px.bar(df_property_general, x='district', y='average_rent', color='property_count',
                               title='Monthly Rent by District and Property Type',
                               labels={'monthly_rent': 'Monthly Rent', 'district': 'District'},
