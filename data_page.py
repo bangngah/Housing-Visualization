@@ -1,10 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt  # Added import for plotting
-from matplotlib.figure import Figure  # Added import for plotting
-import seaborn as sns
-import plost 
 import pandas as pd
-import plotly.express as px
 import numpy as np
 
 def calculate_mortgage_details(principal, years, rate, property_tax_rate, insurance):
