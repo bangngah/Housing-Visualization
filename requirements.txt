@@ -1,8 +1,5 @@
 streamlit
 pandas
-data_page
-visualize_page
-PIL
 folium
 streamlit_folium
 folium.features
