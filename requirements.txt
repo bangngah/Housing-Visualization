@@ -3,8 +3,7 @@ pandas
 folium
 streamlit_folium
 seaborn
-matplotlib.pyplot
+matplotlib
 dash
 plotly.express
-matplotlib.figure
 numpy
