@@ -7,3 +7,5 @@ matplotlib
 dash
 plotly.express
 numpy
+streamlit.components.v1 
+urllib.parse
