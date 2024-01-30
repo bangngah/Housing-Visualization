@@ -3,6 +3,8 @@ import pandas as pd
 import folium 
 from streamlit_folium import st_folium
 import plotly.express as px
+import streamlit.components.v1 as components
+import urllib.parse
 
 
 def highlight_property_name(s, selected_prop_names):
@@ -136,7 +138,34 @@ def show_visualization_page(df_property):
 
     # Displaying the filtered DataFrame
     st.write(f"### Filtered Data:")
-    st.dataframe(filtered_data, width=2000)
+    st.dataframe(filtered_data, width=2050)
+
+    # Sidebar for location search
+    st.sidebar.header("Location Search")
+    search_query = st.sidebar.text_input("Enter a location to search on map:")
+
+    # Encode the search query to be URL-safe
+    encoded_search_query = urllib.parse.quote(search_query)
+
+    # Google Maps iframe with dynamic search functionality
+    if search_query:
+        google_maps_iframe = f"""
+        <iframe width="100%" height="500" style="border:0" loading="lazy" allowfullscreen 
+        src="https://www.google.com/maps/embed/v1/search?q={encoded_search_query}&key=AIzaSyBurmgWoFf-2lWInRFIA430iGxc6IvXg2Q"></iframe>
+        """
+    else:
+        # Default map view when there is no search query
+        google_maps_iframe = """
+        <iframe width="100%" height="500" style="border:0" loading="lazy" allowfullscreen 
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJhzme29JJzDERsIl5hs5Z1RY&key=AIzaSyBurmgWoFf-2lWInRFIA430iGxc6IvXg2Q"></iframe>
+        """
+
+    components.html(google_maps_iframe, height=800)
+
+
+
+
+
 
 
 
