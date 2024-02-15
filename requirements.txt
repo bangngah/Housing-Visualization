@@ -3,9 +3,10 @@ pandas
 folium
 streamlit_folium
 seaborn
-matplotlib
+matplotlib.pyplot
 dash
 plotly.express
+matplotlib.figure
 numpy
-streamlit.components.v1 
-urllib.parse
+streamlit.components.v1
+urllib
